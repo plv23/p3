@@ -1,5 +1,5 @@
 //Paramètres Diaporama
-let slider = new Slider({
+/*let slider = new Slider({
   pause: pause,
   slides: slides,
   controls: controls,
@@ -9,7 +9,7 @@ let slider = new Slider({
   playing: true,
   timer: 5000
 });
-slider.listenEvents();
+slider.listenEvents();*/
 //Paramètres Map
 let apiUrls = {
   baseUrl: "https://api.jcdecaux.com/vls/v1",

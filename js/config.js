@@ -1,33 +1,4 @@
-let pause = document.getElementById("pause");
-let next = document.getElementById("next");
-let slides = document.querySelectorAll('#slides .slide');
-let controls = document.querySelectorAll('.controls');
-let previous = document.getElementById("previous");
-let station_name = document.getElementById("station-name");
-let resa_block = document.getElementById("resa_block");
-let resa = document.getElementById("resa");
-let station = document.getElementById("station");
-let resa_button = document.getElementById("resa-button");
-let signature = document.getElementById("signature");
-let signature_block = document.getElementById('signature-block');
-let btn = document.getElementById("btn");
-let lastname = document.getElementById('lastname');
-let firstname = document.getElementById('firstname');
-let canvas = document.getElementById("canvas");
-let btnclear = document.getElementById("btnClear");
-let btnsignature = document.getElementById("btnSignature");
-let timer = document.getElementById("timer");
-let cancel_one = document.getElementById("cancel1");
-let btn_one = document.getElementById("btn1");
-let resa_title = document.getElementById("resa-title");
-let cancel_two = document.getElementById("cancel");
-let ctdn = document.getElementById("countdown");
-let info_ctdn = document.getElementById("info_countdown");
-let stationName = document.getElementById("stationName");
-let resaBy = document.getElementById("resaBy");
-let resaName = document.getElementById("resaName");
-let status_elt = document.getElementById("status");
-let resa_status = document.getElementById("resa_status");
+let elements = document.getElementsByClassName("disp");
 let interval = null;
 const makeIcon = markerName => new L.Icon({
   iconUrl: `./img/marker_${markerName}.png`,

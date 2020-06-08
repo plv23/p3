@@ -11,8 +11,8 @@ class CanvasObject {
       y: 0
     };
     this.lastPosition = this.mousePosition;
-    this.clearButton = btnclear;
-    this.button = btnsignature;
+    this.clearButton = document.getElementById("btnClear");
+    this.button = document.getElementById("btnSignature");
     this.canvas.width = 240;
     this.canvas.height = 160;
   }

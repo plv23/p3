@@ -55,30 +55,29 @@ class Map {
 }
 class MarkerOnMouseOnClick {
   static onClick(e) {
+    
     let popup = e.target.getPopup();
     let content = popup.getContent();
     let statusText = content.replace('CLOSED', 'FERMÉ');
-    station_name.innerHTML = statusText;
-    if (timer.innerHTML != "") {
+    document.getElementById("station-name").innerHTML = statusText;
+    if (document.getElementById("timer").innerHTML != "") {
       alert("Réservation en cours, cliquer sur le bouton Annuler pour effectuer une nouvelle réservation.");
       return;
     } else {
-      if (station_name.innerHTML.indexOf("FERMÉE") > -1) {
-        station_name.style.color = "red";
-        resa_block.style.display = "none";
-      } else if (station_name.innerHTML.indexOf("<br>0 vélo(s) disponible(s)") > -1) {
-        station_name.style.color = "red";
-        resa_block.style.display = "none";
+      if (document.getElementById("station-name").innerHTML.indexOf("FERMÉE") > -1) {
+        document.getElementById("station-name").style.color = "red";
+        document.getElementById("resa_block").style.display = "none";
+      } else if (document.getElementById("station-name").innerHTML.indexOf("<br>0 vélo(s) disponible(s)") > -1) {
+        document.getElementById("station-name").style.color = "red";
+        document.getElementById("resa_block").style.display = "none";
       } else {
-        resa_block.style.display = "block";
-        resa.style.display = "block";
-        station.style.display = "block";
-        station_name.style.display = "block";
-        station_name.style.color = "#877667";
-        resa_block.style.display = "block";
-        resa_button.style.display = "block";
-        btn.style.display = "none";
-        btn_one.focus();
+        document.getElementById("resa").style.display = "block";
+        for (let i=0 ; i<elements.length ; i++) {
+          elements[i].style.display = "block";
+        }
+      document.getElementById("station-name").style.color = "#877667";
+      document.getElementById("btn").style.display = "none";
+      document.getElementById("btn1").focus();
       }
     }
   }
